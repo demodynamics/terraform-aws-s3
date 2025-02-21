@@ -1,22 +1,32 @@
+variable "project_name" {
+  description = "Project Name"
+  type = string
+}
+
 variable "bucket_name" {
-    type = string
+  description = "Bucket Name"
+  type = string
 }
 
 variable "bucket_region" { 
-    type = string
+  description = "Bucket Region"
+  type = string
 }
 
 variable "bucket_versioning_status" {
-    type = bool
+  description = "Bucket Versioning Status"
+  type = bool
 }
 
 variable "bucket_encryption" {
-    type = string 
+  description = "Bucket Encryption"
+  type = string 
 }
 
-# variable "bucket_key" {
-#   type = string
-# }
+variable "bucket_key" {
+  description = "Bucket Key"
+  type = string
+}
 
 
 

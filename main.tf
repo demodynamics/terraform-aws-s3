@@ -1,3 +1,13 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
+
 # Creating S3 Bucket
 resource "aws_s3_bucket" "s3_bucket" {
   bucket = var.bucket_name
@@ -23,10 +33,11 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "s3_bucket_encrypt
   }
 }
 
-#Creating Object (folder and subfolders) inside our S3 Bucket
-# resource "aws_s3_object" "s3_bucket_object" {
-#   bucket                 = aws_s3_bucket.s3_bucket.bucket
-#   key                    = var.bucket_key
-#   server_side_encryption = var.bucket_encryption
-
-# }
+/*
+ #Creating Object (folder and subfolders) inside S3 Bucket
+ resource "aws_s3_object" "s3_bucket_object" {
+   bucket                 = aws_s3_bucket.s3_bucket.bucket
+   key                    = var.bucket_key
+   server_side_encryption = var.bucket_encryption
+ }
+*/
