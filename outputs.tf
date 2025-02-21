@@ -1,15 +1,13 @@
-
-# This Output strucutre is a Map, every field (key = value) is the object of map
+#1st Type # This Output strucutre is a Map, every field (key = value) is the entry of map
 output "s3_bucket_data" {
   value = {
     "Bucket Name"   = aws_s3_bucket.s3_bucket.bucket
     "Bucket Arn"    = aws_s3_bucket.s3_bucket.arn
-    "Bucket Region" = aws_s3_bucket.s3_bucket.region # Just value.
+    "Bucket Region" = aws_s3_bucket.s3_bucket.region
   }
 }
 
-/*
-# This Output strucutre is a List of objects
+# 2nd Type# This Output strucutre is a List of maps
 output "s3_bucket_data" {
   value = [
     { "Bucket Name"                                     : aws_s3_bucket.s3_bucket.bucket},
@@ -18,9 +16,9 @@ output "s3_bucket_data" {
     { "${aws_s3_bucket.s3_bucket.bucket} Bucket Keys"   : aws_s3_object.s3_bucket_object.key }
   ]
 }
-*/
 
 
-#✅ If you want a well-structured output → Use the first version (map).
-#✅ If you need an array of separate key-value pairs → Use the second version (list of objects), but this is less common.
+
+#✅ If you want a well-structured output → Use the first version` map.
+#✅ If you need an List of separate key-value pairs → Use the second version` list of maps, but this is less common.
 
