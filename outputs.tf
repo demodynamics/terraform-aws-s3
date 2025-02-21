@@ -1,6 +1,6 @@
 #1st Type # This Output strucutre is a Map, every field (key = value) is the entry of map
 output "s3_bucket_data" {
-  description = "${var.project_name} S3 Bucket Data"
+  description = "S3 Bucket Data"
   value = {
     "Bucket Name"   = aws_s3_bucket.s3_bucket.bucket
     "Bucket Arn"    = aws_s3_bucket.s3_bucket.arn
@@ -10,7 +10,7 @@ output "s3_bucket_data" {
 
 # 2nd Type# This Output strucutre is a List of maps
 output "s3_bucket_data" {
-  description = "${var.project_name} S3 Bucket Data"
+  description = "S3 Bucket Data"
   value = [
     { "Bucket Name"                                     : aws_s3_bucket.s3_bucket.bucket},
     { "${aws_s3_bucket.s3_bucket.bucket} Bucket Arn"    : aws_s3_bucket.s3_bucket.arn},
