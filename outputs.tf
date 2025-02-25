@@ -8,6 +8,7 @@ output "s3_bucket_data" {
   }
 }
 
+/*
 # 2nd Type# This Output strucutre is a List of maps
 output "s3_bucket_data" {
   description = "S3 Bucket Data"
@@ -18,6 +19,7 @@ output "s3_bucket_data" {
     { "${aws_s3_bucket.s3_bucket.bucket} Bucket Keys"   : aws_s3_object.s3_bucket_object.key }
   ]
 }
+*/
 
 
 
