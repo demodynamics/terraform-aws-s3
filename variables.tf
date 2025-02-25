@@ -23,10 +23,10 @@ variable "bucket_encryption" {
   type = string 
 }
 
-variable "bucket_key" {
-  description = "Bucket Key"
-  type = string
-}
+# variable "bucket_key" {
+#   description = "Bucket Key"
+#   type = string
+# }
 
 
 
