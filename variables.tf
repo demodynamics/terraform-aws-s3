@@ -1,16 +1,6 @@
-variable "project_name" {
-  description = "Project Name"
-  type = string
-}
-
-variable "bucket_name" {
-  description = "Bucket Name"
-  type = string
-}
-
-variable "bucket_region" { 
-  description = "Bucket Region"
-  type = string
+variable "default_tags" {
+  description = "Tags that are the same for all resources"
+  type = map(string)
 }
 
 variable "bucket_versioning_status" {
@@ -22,11 +12,6 @@ variable "bucket_encryption" {
   description = "Bucket Encryption"
   type = string 
 }
-
-# variable "bucket_key" {
-#   description = "Bucket Key"
-#   type = string
-# }
 
 
 
